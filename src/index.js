@@ -15,19 +15,21 @@ openButton.addEventListener("click", () => {
         const modalContainer = document.querySelector('.modal__wrapper');
         modalContainer.classList.add('_active');
         document.body.style.overflow = 'hidden'; // to disable scrolling
+        console.log("open")
 })
 
 closeButton.addEventListener("click", () => {
         const modalContainer = document.querySelector('.modal__wrapper');
         modalContainer.classList.remove('_active');
         document.body.style.overflow = 'auto'; // to enable scrolling again
+        console.log("close")
       });
 
 
 const form = document.querySelector('.article__form');
 const container = document.querySelector('.articles__wrapper');
   
-    form.addEventListener('submit', (event) => {
+form.addEventListener('submit', (event) => {
       event.preventDefault(); 
 
     const title = document.getElementById('title').value;
@@ -43,12 +45,14 @@ const container = document.querySelector('.articles__wrapper');
     const articleImg = document.createElement('img');
     articleImage.appendChild(articleImg);
 
-    const reader = new FileReader();
-    reader.readAsDataURL(imageFile);
-    reader.onload = () => {
-      articleImg.setAttribute('src', reader.result);
-      console.log(reader.result)
-    };
+    if (imageFile) {
+        const reader = new FileReader();
+        reader.readAsDataURL(imageFile);
+        reader.onload = () => {
+        articleImg.setAttribute('src', reader.result);
+        console.log(reader.result)
+        };
+    }
    
     const articleTitle = document.createElement('h2');
     articleTitle.classList.add('article__title');
@@ -65,11 +69,12 @@ const container = document.querySelector('.articles__wrapper');
     container.appendChild(articleWrapper);
 
     form.reset();
+    console.log("done")
 
     const modalContainer = document.querySelector('.modal__wrapper');
     modalContainer.classList.remove('_active');
     document.body.style.overflow = 'auto'; // to enable scrolling again
-    
+
   });
     
 
