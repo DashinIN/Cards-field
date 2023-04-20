@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+    <head>
+        <nav class="nav__wrapper">
+            <div class="nav__logo">
+                <img src="./img/log.jpg" alt="" class="logo">
+            </div>
+
+            <div class="nav__burger">
+                <span></span>
+            </div>
+
+            <div class="nav__list">
+                <a href="" class="nav__link">link1</a>
+                <a href="" class="nav__link">link2</a>
+                <a href="" class="nav__link">link3</a>
+                <a href="" class="nav__link">link4</a>
+                <a href="" class="nav__link">link5</a>
+            </div>
+
+        </nav>
+    </head>
+
+
+    <main>
+        <div class="articles__wrapper">
+            <div class="article__wrapper">
+                <div class="article__image">
+                    <img src="./img/cover1.jpg" alt="">
+                </div>
+                <h2 class="article__title">title</h2>
+                <p class="article__info">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, tempore!
+                </p>
+            </div>
+            <div class="article__wrapper">
+                <div class="article__image">
+                    <img src="./img/cover2.jpg" alt="">
+                </div>
+                <h2 class="article__title">title</h2>
+                <p class="article__info">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, tempore!
+                </p>
+            </div>
+            <div class="article__wrapper">
+                <div class="article__image">
+                    <img src="./img/cover3.jpg" alt="">
+                </div>
+                <h2 class="article__title">title1</h2>
+                <p class="article__info">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, tempore!
+                </p>
+            </div>
+
+
+            <div class="modal__wrapper">
+                <div class="modal__content">
+                  
+                  <form action="" class="article__form">
+                    <button class="modal__close">&times;</button>
+                    <label for="title">Заголовок:</label>
+                    <input type="text" id="title" name="title" required>
+                  
+                    <label for="description">Описание:</label>
+                    <textarea id="description" name="description" required></textarea>
+                  
+                    <label for="image">Изображение:</label>
+                    <input type="file" id="image" name="image" accept="image/*" required>
+                  
+                    <input type="submit" value="Добавить">
+                  </form>
+                </div>
+              </div>
+    </main>
+
+    <footer>
+        
+        <button class="modal__open">Добавить карточку</button>
+
+    </footer>
+</div>
+    <script src="index.js"></script>
+</body>
+</html>
